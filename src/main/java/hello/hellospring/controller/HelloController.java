@@ -60,7 +60,16 @@ public class HelloController {
 
      정적 컨텐츠: 그냥 파일을 그대로 내려준다
      MVC-템플릿 엔진: 템플릿 엔진을 MVC 방식으로 쪼개서 view 를 템플릿엔진 통해 랜더링 한 html 을 한국어로 만들어 고객에 전달함
-     API: 객체를 반환함. view 없이 json 으로 바꿔서 HttpResponse 에 전달하는 방식.
+     API: 객체를 반환함. view 없이 json 으로 바꿔서 HttpMessageConverter 를 거쳐 HttpResponse 에 전달하는 방식.
 
      **/
+
+
+    /**
+     *
+
+
+     **/
+
+
 }

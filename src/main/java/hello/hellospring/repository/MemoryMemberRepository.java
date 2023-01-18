@@ -2,6 +2,7 @@ package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
 
+import javax.swing.text.html.Option;
 import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository{
@@ -18,7 +19,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public Optional<Member> findById(Long id) {
-        return Optional.ofNullable(store.get(id)); //null일 경우 처리
+        return Optional.ofNullable(store.get(id));
     }
 
     @Override
@@ -35,7 +36,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public List<Member> findAll() {
-        return new ArrayList<>(store.values()); //store에 있는 멤버들을 반환
+        return new ArrayList<>(store.values()); //store 에 있는 멤버들을 반환
     }
 
     public void clearStore(){
