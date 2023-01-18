@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class MemberService {
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
@@ -26,8 +30,6 @@ public class MemberService {
                 throw new IllegalStateException("이미 존재하는 회원입니다.");
             });
     }
-
-    // 이렇게 먼저 등록해서 join 메소드 들어오면 저 검증 메소드를 먼저 할 수 있음
 
     /**
      * 전체 회원 조회 : 서비스는 비즈니스로직 용어를, 리포지토리는 기계적개발 용어 선호
