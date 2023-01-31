@@ -14,7 +14,7 @@ import java.util.Optional;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-class MemoryMemberRepositoryTest {// 테스트주도개발 TDD : 테스트를 먼저 만들고 구현하는 방법인데 구현먼저 만들고 테스트한 건 TDD 아님
+class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
