@@ -8,8 +8,6 @@ import java.util.Optional;
 public interface MemberRepository {
     Member save(Member member); // 회원 저장
     Optional<Member> findById(Long id);
-    Optional<Member> findById(String name);
     Optional<Member> findByName(String name);
-
     List<Member> findAll(); // 저장된 회원리스트 전체 반환
 }
